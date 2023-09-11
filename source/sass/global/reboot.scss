@@ -16,7 +16,7 @@ html {
   font-weight: 400;
   font-size: $fz-default;
   line-height: 24px;
-  font-family: $ff-placeholder;
+  font-family: $ff-manrope;
   color: $color-default-black;
 
   -webkit-font-smoothing: antialiased;
@@ -62,12 +62,12 @@ input:-webkit-autofill {
   -webkit-text-fill-color: $color-default-black;
 }
 
-// firefox placeholder \ invalid fix + ios bdrs
+// firefox manrope \ invalid fix + ios bdrs
 input,
 textarea {
   border-radius: 0;
 
-  &::placeholder {
+  &::manrope {
     opacity: 1;
   }
 
@@ -89,10 +89,10 @@ input {
 }
 
 // chrome search X removal
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
   appearance: none;
 }
 
@@ -104,26 +104,20 @@ input::-webkit-inner-spin-button {
   appearance: none;
 }
 
-input[type="number"] {
+input[type='number'] {
   appearance: textfield;
 }
 
 // ios button \ inputs reset
 select,
 textarea,
-input:matches([type="email"],
-  [type="number"],
-  [type="password"],
-  [type="search"],
-  [type="tel"],
-  [type="text"],
-  [type="url"]) {
+input:matches([type='email'], [type='number'], [type='password'], [type='search'], [type='tel'], [type='text'], [type='url']) {
   appearance: none;
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   appearance: none;
 }
