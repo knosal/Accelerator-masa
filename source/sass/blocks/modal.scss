@@ -11,14 +11,12 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  background-color: rgba($color-default-black, 0.8);
+  background-color: $modal-overlay;
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
 
-  transition: opacity $trans-modal,
-    transform $trans-modal,
-    visibility $trans-modal;
+  transition: opacity $trans-modal, transform $trans-modal, visibility $trans-modal;
 
   pointer-events: none;
 
@@ -38,10 +36,14 @@
     align-items: center;
     width: 100%;
     min-height: 100%;
-    padding: 60px 40px;
+    padding: 92px 0 99px;
+
+    @include vp-1199 {
+      padding: 204px 0 99px;
+    }
 
     @include vp-767 {
-      padding: 60px 16px;
+      padding: 22px 16px;
     }
   }
 
@@ -58,19 +60,9 @@
 
   &__content {
     position: relative;
-
-    width: 600px;
-    padding: 40px;
-
-    background-color: $color-default-white;
-
-    @include vp-767 {
-      width: 100%;
-      padding: 20px;
-    }
   }
 
-  &__close-btn {
+  &__close-button {
     position: absolute;
     top: 22px;
     right: 22px;
