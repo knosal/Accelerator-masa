@@ -3,6 +3,7 @@
     @content;
   }
 }
+
 @mixin hover {
   @media (hover: hover) {
     &:hover:not(.focus-visible) {
@@ -12,8 +13,7 @@
 }
 
 @mixin focus {
-  &.focus-visible:focus,
-  &:focus-within {
+  &.focus-visible:focus {
     @content;
   }
 }
@@ -36,13 +36,19 @@
   }
 }
 
-@mixin disabled {
-  &:disabled {
+// Desktop first
+
+@mixin vp-1441 {
+  @media (min-width: ($vp-1440 + 1px)) {
     @content;
   }
 }
 
-// Desktop first
+@mixin vp-1440 {
+  @media (max-width: ($vp-1440 - 1px)) {
+    @content;
+  }
+}
 
 @mixin vp-1199 {
   @media (max-width: ($vp-1200 - 1px)) {
@@ -53,5 +59,58 @@
 @mixin vp-767 {
   @media (max-width: ($vp-768 - 1px)) {
     @content;
+  }
+}
+
+@mixin title {
+  margin: 0;
+
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 50px;
+  color: $color-cerulean-blue;
+
+  @include vp-1199 {
+    font-size: 34px;
+    line-height: 50px;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@mixin title-light {
+  @include title;
+
+  color: $color-default-white;
+}
+
+@mixin corner {
+  position: relative;
+
+  background-color: $color-default-white;
+
+  &::after {
+    position: absolute;
+    right: -19px;
+    bottom: 0;
+    content: '';
+
+    width: 20px;
+    height: 20px;
+
+    mask-image: url('../img/svg/corner.svg');
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    background-color: $color-default-white;
+
+    @include vp-767 {
+      right: -9px;
+
+      width: 10px;
+      height: 10px;
+    }
   }
 }

@@ -1,26 +1,271 @@
-.btn {
-  display: inline-flex;
-  padding: 10px 20px;
+.button {
+  padding: 4px;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  color: $color-default-white;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
 
-  background-color: $color-neon-blue;
+  border-radius: 30px;
   border: none;
+
   cursor: pointer;
-
-  transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-torch-red;
-  }
+  user-select: none;
 
   &:disabled {
-    opacity: 0.5;
-
     pointer-events: none;
   }
 
-  @include hover-focus {
-    opacity: 0.8;
+  @include vp-767 {
+    padding-left: 20px;
+
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.24px;
+  }
+
+  &--primary {
+    color: $color-cerulean-blue;
+
+    box-shadow: 0 0 0 1px $color-cerulean-blue inset;
+    background-color: $color-transparent;
+
+    .button__icon {
+      background-color: $color-cerulean-blue;
+    }
+
+    &:hover,
+    &:focus-within {
+      color: $color-default-white;
+
+      background-color: $color-cerulean-blue;
+
+      .button__icon {
+        background-color: $color-default-white;
+      }
+
+      svg {
+        stroke: $color-cerulean-blue;
+      }
+
+      &:active {
+        color: rgba(255, 255, 255, 0.7);
+      }
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.7);
+
+      background-color: $color-cerulean-blue;
+
+      .button__icon {
+        background-color: $color-default-white;
+      }
+
+      svg {
+        stroke: $color-cerulean-blue;
+      }
+    }
+
+    &:focus,
+    &:focus-visible {
+      color: $color-default-white;
+
+      background-color: $color-cerulean-blue;
+
+      .button__icon {
+        background-color: $color-default-white;
+      }
+
+      svg {
+        stroke: $color-cerulean-blue;
+      }
+    }
+  }
+
+  &--secondary {
+    color: $color-default-white;
+
+    box-shadow: 0 0 0 1px $color-default-white inset;
+
+    .button__icon {
+      background-color: $color-default-white;
+    }
+
+    &:hover,
+    &:focus-within {
+      color: $color-cerulean-blue;
+
+      background-color: $color-default-white;
+
+      .button__icon {
+        background-color: $color-cerulean-blue;
+      }
+
+      svg {
+        stroke: $color-default-white;
+      }
+
+      &:active {
+        color: rgba(49, 109, 194, 0.7);
+      }
+    }
+
+    &:active {
+      color: rgba(49, 109, 194, 0.7);
+
+      background-color: $color-default-white;
+
+      .button__icon {
+        background-color: $color-cerulean-blue;
+      }
+
+      svg {
+        stroke: $color-default-white;
+      }
+    }
+
+    &:focus,
+    &:focus-visible {
+      color: $color-cerulean-blue;
+
+      background-color: $color-default-white;
+
+      .button__icon {
+        background-color: $color-cerulean-blue;
+      }
+
+      svg {
+        stroke: $color-default-white;
+      }
+    }
+  }
+
+  &--primary,
+  &--secondary {
+    transition: all $trans-default;
+
+    &:hover,
+    &:focus-within {
+      svg {
+        transform: rotate(45deg);
+      }
+    }
+
+    &:active {
+      svg {
+        transform: rotate(45deg);
+      }
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+
+      svg {
+        transform: rotate(45deg);
+      }
+    }
+
+    &:disabled {
+      outline: $color-mischka;
+
+      .button__icon {
+        background-color: $color-mischka;
+      }
+    }
+  }
+
+  &--swiper {
+    padding: 0;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+
+    border: none;
+    border-radius: 50%;
+    background-color: $color-transparent;
+
+    transition: all $trans-default;
+
+    svg {
+      stroke: $color-cerulean-blue;
+    }
+
+    &:hover,
+    &:focus-within {
+      background-color: $color-default-white;
+
+      &:active {
+        svg {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    &:active {
+      svg {
+        opacity: 0.7;
+      }
+    }
+
+    &:focus,
+    &:focus-visible {
+      background-color: $color-default-white;
+      outline: none;
+    }
+
+    &:disabled {
+      pointer-events: none;
+
+      svg {
+        stroke: $color-mischka;
+      }
+    }
+
+    @include vp-767 {
+      padding: 0;
+    }
+  }
+
+  &--swiper-prev {
+    transform: rotate(180deg);
+  }
+}
+
+.button__icon {
+  width: 46px;
+  height: 46px;
+  padding: 19px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  transition: all $trans-default;
+
+  @include vp-767 {
+    width: 34px;
+    height: 34px;
+    padding: 12px;
+  }
+
+  svg {
+    stroke: $color-default-white;
+    transform: rotate(0);
+
+    transition: transform $trans-default, stroke $trans-default;
+  }
+
+  &--secondary {
+    svg {
+      stroke: $color-cerulean-blue;
+    }
   }
 }
