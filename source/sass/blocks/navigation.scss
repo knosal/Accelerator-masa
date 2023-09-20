@@ -9,6 +9,8 @@
   position: relative;
   z-index: 6;
 
+  //transition: height $trans-default;
+
   &.is-opened .navigation__list {
     height: auto;
     padding: 29px 25px 13px;
@@ -37,6 +39,8 @@
   line-height: 14px;
   letter-spacing: 0.28px;
   text-transform: uppercase;
+
+  // transition: all $trans-default;
 
   span {
     display: flex;
@@ -138,12 +142,15 @@
 
 .navigation__list {
   min-width: 286px;
+  overflow: hidden;
   margin: 0;
   padding: 0;
   background: $color-cerulean-blue;
   border-radius: 16px;
   list-style: none;
   height: 0;
+
+  // transition: all $trans-default;
 }
 
 .navigation__item {
@@ -182,9 +189,13 @@
 }
 
 .navigation__link-submenu {
+  transition: color $trans-default;
+
   &.is-active {
     svg {
       transform: rotate(180deg);
+
+      transition: transform $trans-default;
     }
   }
 }

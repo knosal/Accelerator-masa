@@ -16,6 +16,7 @@
 
     .header__logo {
       pointer-events: none;
+      transition: all $trans-default;
 
       &::after {
         content: '';

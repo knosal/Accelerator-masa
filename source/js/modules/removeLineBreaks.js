@@ -10,7 +10,7 @@ const breakpointChecker = () => {
   });
 };
 
-export const initLineBreaksk = () => {
+export const initLineBreaks = () => {
   if (featureTitles.length > 0) {
     breakpointChecker();
     window.addEventListener('resize', breakpointChecker);

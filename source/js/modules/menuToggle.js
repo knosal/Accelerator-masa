@@ -2,8 +2,8 @@ const initButtonMenu = () => {
   const isOpened = 'is-opened';
   const header = document.querySelector('.header');
   const container = header.querySelector('.header__container');
-  const toggleBtn = header.querySelector('.navigation__button');
   const navigation = header.querySelector('.navigation');
+  const toggleBtn = navigation.querySelector('.navigation__button');
 
   const onDocumentKeydown = (evt) => {
     return evt.key === 'Escape' ? closeMenu() : null;

@@ -3,10 +3,11 @@ import {CustomSelect} from './vendor/custom-select/custom-select';
 import {initModals} from './vendor/modals/init-modals';
 import {iosVhFix} from './utils/ios-vh-fix';
 import {Form} from './vendor/form-validate/form';
+import {createScript} from './vendor/pixelperfect';
 
 import {initAllSliders} from './modules/initSwiperSlider';
 import {initNewsFilter} from './modules/initNewsFilter';
-import {initLineBreaksk} from './modules/removeLineBreaks';
+import {initLineBreaks} from './modules/removeLineBreaks';
 import {initButtonMenu} from './modules/menuToggle';
 import {initMap} from './modules/map';
 
@@ -17,12 +18,12 @@ window.addEventListener('DOMContentLoaded', () => {
   initButtonMenu();
 
   window.addEventListener('load', () => {
-    //createScript() //pixelperfect;
+    createScript(); //pixelperfect;
     initModals();
     initAllSliders();
     initAccordions();
     initNewsFilter();
-    initLineBreaksk();
+    initLineBreaks();
     initMap();
 
     const select = new CustomSelect();
