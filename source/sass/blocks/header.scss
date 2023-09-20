@@ -7,7 +7,7 @@
 
   background-color: $color-transparent;
 
-  transition: background-color 1s, height 1s;
+  transition: all $trans-default;
 
   &.is-opened {
     z-index: 100;
@@ -46,6 +46,8 @@
 
   display: grid;
   grid-template-columns: auto auto;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 .header__logo {
