@@ -2482,6 +2482,8 @@ button,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
 }
 
 .button--primary {
@@ -2757,6 +2759,8 @@ button,
 
 .header.is-opened .header__logo {
   pointer-events: none;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .header.is-opened .header__logo::after {
@@ -3311,6 +3315,7 @@ button,
 
 .navigation__list {
   min-width: 286px;
+  overflow: hidden;
   margin: 0;
   padding: 0;
   background: #316dc2;
@@ -3355,10 +3360,19 @@ button,
   stroke: rgba(255, 255, 255, 0.6);
 }
 
+.navigation__link-submenu {
+  -webkit-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in;
+}
+
 .navigation__link-submenu.is-active svg {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  transition: -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
 }
 
 .navigation__sublist {
