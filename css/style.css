@@ -2484,10 +2484,6 @@ button,
   user-select: none;
 }
 
-.button:disabled {
-  pointer-events: none;
-}
-
 .button--primary {
   color: #316dc2;
   -webkit-box-shadow: 0 0 0 1px #316dc2 inset;
@@ -2520,19 +2516,6 @@ button,
   color: rgba(255, 255, 255, 0.7);
 }
 
-.button--primary:active {
-  color: rgba(255, 255, 255, 0.7);
-  background-color: #316dc2;
-}
-
-.button--primary:active .button__icon {
-  background-color: #ffffff;
-}
-
-.button--primary:active svg {
-  stroke: #316dc2;
-}
-
 .button--primary:focus,
 .button--primary:focus-visible {
   color: #ffffff;
@@ -2546,6 +2529,19 @@ button,
 
 .button--primary:focus svg,
 .button--primary:focus-visible svg {
+  stroke: #316dc2;
+}
+
+.button--primary:active {
+  color: rgba(255, 255, 255, 0.7);
+  background-color: #316dc2;
+}
+
+.button--primary:active .button__icon {
+  background-color: #ffffff;
+}
+
+.button--primary:active svg {
   stroke: #316dc2;
 }
 
@@ -2580,19 +2576,6 @@ button,
   color: rgba(49, 109, 194, 0.7);
 }
 
-.button--secondary:active {
-  color: rgba(49, 109, 194, 0.7);
-  background-color: #ffffff;
-}
-
-.button--secondary:active .button__icon {
-  background-color: #316dc2;
-}
-
-.button--secondary:active svg {
-  stroke: #ffffff;
-}
-
 .button--secondary:focus,
 .button--secondary:focus-visible {
   color: #316dc2;
@@ -2606,6 +2589,19 @@ button,
 
 .button--secondary:focus svg,
 .button--secondary:focus-visible svg {
+  stroke: #ffffff;
+}
+
+.button--secondary:active {
+  color: rgba(49, 109, 194, 0.7);
+  background-color: #ffffff;
+}
+
+.button--secondary:active .button__icon {
+  background-color: #316dc2;
+}
+
+.button--secondary:active svg {
   stroke: #ffffff;
 }
 
@@ -2624,13 +2620,6 @@ button,
   transform: rotate(45deg);
 }
 
-.button--primary:active svg,
-.button--secondary:active svg {
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
 .button--primary:focus,
 .button--primary:focus-visible,
 .button--secondary:focus,
@@ -2642,6 +2631,13 @@ button,
 .button--primary:focus-visible svg,
 .button--secondary:focus svg,
 .button--secondary:focus-visible svg {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.button--primary:active svg,
+.button--secondary:active svg {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -2685,14 +2681,14 @@ button,
   opacity: 0.7;
 }
 
-.button--swiper:active svg {
-  opacity: 0.7;
-}
-
 .button--swiper:focus,
 .button--swiper:focus-visible {
   background-color: #ffffff;
   outline: none;
+}
+
+.button--swiper:active svg {
+  opacity: 0.7;
 }
 
 .button--swiper:disabled {
@@ -3907,7 +3903,7 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
 }
 
 .form__button--primary span,
-.form__button--primary .form__button-icon {
+.form__button--primary .form__button {
   margin-left: auto;
 }
 
@@ -6593,7 +6589,7 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
   }
 
   .form__button span,
-  .form__button .form__button-icon {
+  .form__button .form__button {
     margin-left: auto;
   }
 
