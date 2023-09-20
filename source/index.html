@@ -25,7 +25,7 @@
         <div class="header__container container">
           <div class="header__wrapper" data-accordion="parent">
             <a class="header__logo" href="index.html" aria-current="page">
-              <svg width="52" height="52" alt="Логотип компании Маса." aria-hidden="true">
+              <svg width="52" height="52" aria-hidden="true">
                 <use href="img/sprite.svg#logo"></use>
               </svg>
             </a>
@@ -241,7 +241,7 @@
                 </a>
               </div>
             </div>
-            <div class="about__features" aria-label="Наши преимущества">
+            <div class="about__features">
               <ul aria-label="Список преимуществ">
                 <li class="about__feature-item">
                   <h3 data-name="feature-title">Более 250 <br />программ</h3>
@@ -882,13 +882,113 @@
             </div>
           </div>
         </section>
+
+        <section class="contacts" id="contacts">
+          <div class="container">
+            <div class="contacts__info">
+              <h2>Контакты</h2>
+              <ul aria-label="Список контактов.">
+                <li>
+                  <h3>Центральный офис</h3>
+                  <address>г.&nbsp;Новосибирск, ул.&nbsp;Щетинкина&nbsp;68, культурный центр &laquo;Бейт Менахем&raquo;</address>
+                </li>
+                <li>
+                  <h3>Телефон</h3>
+                  <a href="tel:+796387687676">+7&nbsp;963&nbsp;876&nbsp;876&nbsp;76</a>
+                </li>
+                <li>
+                  <h3>E-mail</h3>
+                  <a href="mailto:info@masa.ru">Info@masa.ru</a>
+                </li>
+              </ul>
+            </div>
+            <div class="contacts__map" id="map">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)" srcset="./img/contacts/map-mobile.webp, ./img/contacts/map-mobile@2x.webp 2x" width="290" height="240" />
+                <source type="image/webp" media="(max-width: 1199px)" srcset="./img/contacts/map-tablet.webp, ./img/contacts/map-tablet@2x.webp 2x" width="678" height="500" />
+                <source type="image/webp" srcset="./img/contacts/map.webp, ./img/contacts/map@2x.webp 2x" width="1240" height="500" />
+
+                <source media="(max-width: 767px)" srcset="./img/contacts/map-mobile.png, ./img/contacts/map-mobile@2x.png 2x" width="290" height="240" />
+                <source media="(max-width: 1199px)" srcset="./img/contacts/map-tablet.png, ./img/contacts/map-tablet@2x.png 2x" width="678" height="500" />
+                <img src="./img/contacts/map.png" srcset="./img/contacts/map.png 2x" width="1240" height="500" alt="Адрес офиса по адресу: г. Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»" loading="lazy" />
+              </picture>
+            </div>
+          </div>
+        </section>
+
+        <section class="form">
+          <div class="container container--form">
+            <div class="form__inner">
+              <div class="form__container">
+                <h2>Напишите нам</h2>
+                <p>Оставьте ваши контакты, если у&nbsp;вас остались вопросы – мы на них ответим!</p>
+                <div class="form__wrapper form__wrapper--primary" data-form-validate data-callback="base">
+                  <form action="https://echo.htmlacademy.ru/" method="post">
+                    <div class="form__input-wrapper form__input-wrapper--primary" data-required data-validate-type="text" data-limitation="letters-and-digit">
+                      <label>
+                        <span>Имя</span>
+                        <input type="text" name="name" required />
+                      </label>
+                    </div>
+                    <div class="form__input-wrapper form__input-wrapper--primary" data-required data-validate-type="phone">
+                      <label>
+                        <span>Телефон</span>
+                        <input type="tel" name="phone" required />
+                      </label>
+                    </div>
+                    <div class="form__input-wrapper form__input-wrapper--primary" data-required data-validate-type="text">
+                      <label>
+                        <span>Ваше сообщение</span>
+                        <textarea name="message" id="message" required></textarea>
+                      </label>
+                    </div>
+                    <div class="form__input-wrapper form__select form__select--primary custom-select" data-select="data-select" data-validate-type="select" data-required="true" data-name="city" data-id="city">
+                      <span>Выберите город</span>
+                      <button class="form__select-button form__select-button--primary custom-select__button" type="button" aria-label="Выберите город.">
+                        <span class="custom-select__text"></span>
+                        <span class="form__select-icon form__select-icon--primary custom-select__icon"></span>
+                      </button>
+                      <ul class="form__select-list form__select-list--primary custom-select__list" role="listbox">
+                        <li class="form__select-item custom-select__item" tabindex="0" data-select-value="saint-petersburg" aria-selected="false" role="option">Санкт-Петербург</li>
+                        <li class="form__select-item custom-select__item" tabindex="0" data-select-value="saint-petersburg" aria-selected="false" role="option">Санкт-Петербург</li>
+                        <li class="form__select-item custom-select__item" tabindex="0" data-select-value="saint-petersburg" aria-selected="false" role="option">Санкт-Петербург</li>
+                        <li class="form__select-item custom-select__item" tabindex="0" data-select-value="saint-petersburg" aria-selected="false" role="option">Санкт-Петербург</li>
+                      </ul>
+                    </div>
+                    <div class="form__checkbox form__checkbox--primary" data-validate-type="checkbox">
+                      <label>
+                        <input type="checkbox" value="agree" name="user-agreement" required />
+                        <span class="form__checkbox-icon form__checkbox-icon--primary"></span>
+                        <span class="form__checkbox-label">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</span>
+                      </label>
+                    </div>
+                    <button class="form__button form__button--primary button button--secondary" type="submit">
+                      <span>Отправить</span>
+                      <span class="form__button-icon button__icon button__icon--secondary">
+                        <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+                          <use href="img/sprite.svg#button-arrow" />
+                        </svg>
+                      </span>
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <picture>
+                <source type="image/webp" media="(max-width: 1199px)" srcset="img/form/form-background-tablet.webp 1x, img/form/form-background-tablet@2x.webp 2x" width="678" height="780" />
+                <source type="image/webp" srcset="img/form/form-background-desktop.webp 1x, img/form/form-background-desktop@2x.webp 2x" width="1240" height="803" />
+                <source media="(max-width: 1199px)" srcset="img/form/form-background-tablet.jpg 1x, img/form/form-background-tablet@2x.jpg 2x" width="678" height="780" />
+                <img src="img/form/form-background-desktop.jpg" srcset="img/form/form-background-desktop@2x.jpg" width="1240" height="803" alt="Фото пляжа в Израиле." loading="lazy" />
+              </picture>
+            </div>
+          </div>
+        </section>
       </main>
 
       <footer class="footer">
         <div class="container">
           <div class="footer__wrapper">
             <a class="footer__logo" href="index.html" aria-current="page">
-              <svg width="52" height="52" alt="Логотип компании Маса." aria-hidden="true">
+              <svg width="52" height="52" aria-hidden="true">
                 <use href="img/sprite.svg#logo"></use>
               </svg>
             </a>
@@ -946,6 +1046,65 @@
           </div>
         </div>
       </footer>
+    </div>
+
+    <div class="modal modal--preload" data-modal="about">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content form form--modal">
+          <button class="form__close-button" type="button" data-close-modal>
+            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false">
+              <use href="img/sprite.svg#modal-close" />
+            </svg>
+          </button>
+          <h2>Напишите нам</h2>
+          <p>Оставьте ваши контакты, если&nbsp;у вас остались вопросы&nbsp;– мы на них ответим!</p>
+          <div class="form__wrapper" data-form-validate data-callback="base">
+            <form action="https://echo.htmlacademy.ru/" method="post">
+              <div class="form__input-wrapper form__input-wrapper--modal" data-required data-validate-type="text" data-limitation="letters-and-digit">
+                <label>
+                  <span>Имя</span>
+                  <input type="text" name="name" required />
+                </label>
+              </div>
+              <div class="form__input-wrapper form__input-wrapper--modal" data-required data-validate-type="phone">
+                <label>
+                  <span>Телефон</span>
+                  <input type="tel" name="phone" required />
+                </label>
+              </div>
+              <div class="form__input-wrapper form__select custom-select" data-select="data-select" data-validate-type="select" data-required="true" data-name="city" data-id="city">
+                <span>Выберите город</span>
+                <button class="form__select-button form__select-button--modal custom-select__button" type="button" aria-label="Выберите город.">
+                  <span class="custom-select__text"></span>
+                  <span class="form__select-icon form__select-icon--modal custom-select__icon"></span>
+                </button>
+                <ul class="form__select-list form__select-list--modal custom-select__list" role="listbox">
+                  <li class="form__select-item custom-select__item" tabindex="0" data-select-value="saint-petersburg" aria-selected="false" role="option">Санкт-Петербург</li>
+                  <li class="form__select-item custom-select__item" tabindex="0" data-select-value="saint-petersburg" aria-selected="false" role="option">Санкт-Петербург</li>
+                  <li class="form__select-item custom-select__item" tabindex="0" data-select-value="saint-petersburg" aria-selected="false" role="option">Санкт-Петербург</li>
+                  <li class="form__select-item custom-select__item" tabindex="0" data-select-value="saint-petersburg" aria-selected="false" role="option">Санкт-Петербург</li>
+                </ul>
+              </div>
+              <div class="form__checkbox form__checkbox--modal" data-validate-type="checkbox">
+                <label>
+                  <input type="checkbox" value="agree" name="user-agreement" />
+                  <span class="form__checkbox-icon form__checkbox-icon--modal"></span>
+                  <span class="form__checkbox-label">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</span>
+                </label>
+              </div>
+              <button class="form__button button button--primary" type="submit">
+                <span>Отправить</span>
+                <span class="form__button-icon button__icon">
+                  <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+                    <use href="img/sprite.svg#button-arrow" />
+                  </svg>
+                </span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="js/vendor.min.js"></script>
