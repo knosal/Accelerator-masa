@@ -1,3 +1,6 @@
+//-------------------------
+// Состояния
+
 @mixin retina {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     @content;
@@ -36,7 +39,8 @@
   }
 }
 
-// Desktop first
+//-------------------------
+// Breakpoints
 
 @mixin vp-1441 {
   @media (min-width: ($vp-1440 + 1px)) {
@@ -62,6 +66,9 @@
   }
 }
 
+//-------------------------
+// Заголовки
+
 @mixin title {
   margin: 0;
 
@@ -86,6 +93,9 @@
 
   color: $color-default-white;
 }
+
+//-------------------------
+// Элементы
 
 @mixin corner {
   position: relative;
@@ -114,3 +124,4 @@
     }
   }
 }
+//-------------------------

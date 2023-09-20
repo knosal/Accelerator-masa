@@ -17,10 +17,6 @@
   cursor: pointer;
   user-select: none;
 
-  &:disabled {
-    pointer-events: none;
-  }
-
   @include vp-767 {
     padding-left: 20px;
 
@@ -58,8 +54,9 @@
       }
     }
 
-    &:active {
-      color: rgba(255, 255, 255, 0.7);
+    &:focus,
+    &:focus-visible {
+      color: $color-default-white;
 
       background-color: $color-cerulean-blue;
 
@@ -72,9 +69,8 @@
       }
     }
 
-    &:focus,
-    &:focus-visible {
-      color: $color-default-white;
+    &:active {
+      color: rgba(255, 255, 255, 0.7);
 
       background-color: $color-cerulean-blue;
 
@@ -116,8 +112,9 @@
       }
     }
 
-    &:active {
-      color: rgba(49, 109, 194, 0.7);
+    &:focus,
+    &:focus-visible {
+      color: $color-cerulean-blue;
 
       background-color: $color-default-white;
 
@@ -130,9 +127,8 @@
       }
     }
 
-    &:focus,
-    &:focus-visible {
-      color: $color-cerulean-blue;
+    &:active {
+      color: rgba(49, 109, 194, 0.7);
 
       background-color: $color-default-white;
 
@@ -157,16 +153,16 @@
       }
     }
 
-    &:active {
+    &:focus,
+    &:focus-visible {
+      outline: none;
+
       svg {
         transform: rotate(45deg);
       }
     }
 
-    &:focus,
-    &:focus-visible {
-      outline: none;
-
+    &:active {
       svg {
         transform: rotate(45deg);
       }
@@ -208,16 +204,16 @@
       }
     }
 
-    &:active {
-      svg {
-        opacity: 0.7;
-      }
-    }
-
     &:focus,
     &:focus-visible {
       background-color: $color-default-white;
       outline: none;
+    }
+
+    &:active {
+      svg {
+        opacity: 0.7;
+      }
     }
 
     &:disabled {
