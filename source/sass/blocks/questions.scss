@@ -1,0 +1,436 @@
+.questions {
+  padding-top: 42px;
+
+  h2 {
+    @include title;
+
+    margin-bottom: 69px;
+
+    text-align: center;
+
+    @include vp-1199 {
+      margin-bottom: 41px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 35px;
+    }
+  }
+
+  ul {
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 83%;
+
+    list-style: none;
+
+    @include vp-1199 {
+      width: 100%;
+      gap: 11px;
+    }
+
+    @include vp-767 {
+      gap: 10px;
+    }
+  }
+
+  li.is-active {
+    & > .questions__item {
+      padding: 41px 40px 15px;
+
+      background-color: $color-cerulean-blue;
+
+      @include vp-1199 {
+        padding: 30px 30px 9px;
+      }
+
+      @include vp-767 {
+        padding: 20px 15px 13px;
+      }
+    }
+  }
+
+  @include vp-1199 {
+    padding-top: 20px;
+  }
+
+  @include vp-767 {
+    padding-top: 4px;
+  }
+}
+
+.questions__item {
+  padding: 40px 40px 33px;
+  min-height: 118px;
+
+  outline: 1px solid $color-cerulean-blue;
+  border-radius: 16px;
+  background-color: $color-transparent;
+
+  transition: background-color 0.5s cubic-bezier(0.37, 0, 0.63, 1);
+  cursor: pointer;
+
+  @include vp-1199 {
+    padding: 28px 30px 28px;
+    min-height: 98px;
+  }
+
+  @include vp-767 {
+    padding: 20px 15px;
+    min-height: 79px;
+  }
+
+  &:hover,
+  &:focus-within {
+    background-color: $color-default-white;
+
+    button {
+      background-color: transparent;
+      outline: 1px solid $color-cerulean-blue;
+
+      &::after,
+      &::before {
+        background-color: $color-cerulean-blue;
+      }
+    }
+
+    &:active {
+      color: $color-endeavour;
+
+      button {
+        background-color: $color-endeavour;
+        outline: none;
+
+        &::after,
+        &::before {
+          background-color: $color-default-white;
+        }
+      }
+    }
+  }
+
+  &:active {
+    color: $color-endeavour;
+
+    button {
+      background-color: $color-endeavour;
+      outline: none;
+
+      &::after,
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $color-default-white;
+
+    button {
+      background-color: transparent;
+      outline: 1px solid $color-cerulean-blue;
+
+      &::after,
+      &::before {
+        background-color: $color-cerulean-blue;
+      }
+    }
+  }
+
+  &.is-active {
+    &:hover,
+    &:focus-within {
+      background-color: $color-cerulean-blue;
+
+      button {
+        background-color: transparent;
+        outline: 1px solid $color-default-white;
+
+        &::before {
+          background-color: $color-default-white;
+        }
+
+        &::after {
+          background-color: $color-transparent;
+        }
+      }
+
+      &:active {
+        background-color: $color-endeavour;
+
+        button {
+          background-color: $color-default-white;
+
+          &::before {
+            background-color: $color-endeavour;
+          }
+
+          &::after {
+            background-color: $color-transparent;
+          }
+        }
+      }
+    }
+
+    &:active {
+      background-color: $color-endeavour;
+
+      button {
+        background-color: $color-default-white;
+
+        &::before {
+          background-color: $color-endeavour;
+        }
+
+        &::after {
+          background-color: $color-transparent;
+        }
+      }
+    }
+
+    &:focus,
+    &:focus-visible {
+      background-color: $color-cerulean-blue;
+
+      button {
+        background-color: transparent;
+        outline: 1px solid $color-default-white;
+
+        &::before {
+          background-color: $color-default-white;
+        }
+
+        &::after {
+          background-color: $color-transparent;
+        }
+      }
+    }
+  }
+}
+
+.questions__item-wrapper {
+  display: grid;
+  grid-template-columns: auto min-content;
+  justify-content: space-between;
+  column-gap: 200px;
+
+  h3 {
+    margin: 0;
+    max-width: 624px;
+
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 29px;
+    color: $color-cerulean-blue;
+
+    transition: color $trans-default;
+
+    @include vp-1199 {
+      margin: auto 0;
+
+      font-size: 22px;
+      line-height: 23px;
+    }
+
+    @include vp-767 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+
+  &.is-active {
+    h3 {
+      color: $color-default-white;
+    }
+  }
+
+  @include vp-1199 {
+    column-gap: 30px;
+  }
+
+  @include vp-767 {
+    align-items: center;
+    column-gap: 3px;
+  }
+}
+
+.questions__accordion-button {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+
+  background-color: $color-cerulean-blue;
+  border: none;
+  border-radius: 50%;
+
+  transition: background-color 0.5s cubic-bezier(0.37, 0, 0.63, 1);
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: '';
+
+    background-color: $color-default-white;
+
+    transition: background-color 0.5s cubic-bezier(0.37, 0, 0.63, 1);
+  }
+
+  &::after {
+    width: 1px;
+    height: 20px;
+  }
+
+  &::before {
+    width: 20px;
+    height: 1px;
+  }
+
+  &:hover,
+  &:focus-within {
+    background-color: transparent;
+    outline: 1px solid $color-cerulean-blue;
+
+    &::after,
+    &::before {
+      background-color: $color-cerulean-blue;
+    }
+
+    &:active {
+      background-color: $color-endeavour;
+
+      &::after,
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+  }
+
+  &:active {
+    background-color: $color-endeavour;
+
+    &::after,
+    &::before {
+      background-color: $color-default-white;
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: transparent;
+    outline: 1px solid $color-cerulean-blue;
+
+    &::after,
+    &::before {
+      background-color: $color-cerulean-blue;
+    }
+  }
+
+  &:disabled {
+    background-color: $color-mischka;
+
+    &::after,
+    &::before {
+      background-color: $color-default-white;
+    }
+  }
+
+  &.is-active {
+    background-color: $color-default-white;
+
+    &::after {
+      background-color: $color-transparent;
+    }
+
+    &::before {
+      background-color: $color-cerulean-blue;
+    }
+
+    &:hover,
+    &:focus-within {
+      background-color: transparent;
+      outline: 1px solid $color-default-white;
+
+      &::before {
+        background-color: $color-default-white;
+      }
+
+      &::after {
+        background-color: $color-transparent;
+      }
+
+      &:active {
+        background-color: $color-default-white;
+
+        &::before {
+          background-color: $color-endeavour;
+        }
+
+        &::after {
+          background-color: $color-transparent;
+        }
+      }
+    }
+
+    &:active {
+      background-color: $color-default-white;
+
+      &::before {
+        background-color: $color-endeavour;
+      }
+
+      &::after {
+        background-color: $color-transparent;
+      }
+    }
+
+    &:focus,
+    &:focus-visible {
+      background-color: transparent;
+      outline: 1px solid $color-default-white;
+
+      &::before {
+        background-color: $color-default-white;
+      }
+
+      &::after {
+        background-color: $color-transparent;
+      }
+    }
+  }
+}
+
+.questions__accordion-content {
+  p {
+    width: 70%;
+    margin-top: 10px;
+
+    font-size: 16px;
+    line-height: 26px;
+    color: $color-default-white;
+
+    @include vp-1199 {
+      margin-top: 16px;
+      width: 85%;
+
+      line-height: 20px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      margin-top: 15px;
+      margin-bottom: 0;
+
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
