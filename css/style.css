@@ -2205,7 +2205,7 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1230px;
+  max-width: 1270px;
   min-width: 320px;
   margin: 0 auto;
   padding: 0 15px;
@@ -3519,7 +3519,7 @@ button,
 }
 
 .form__input-wrapper span {
-  margin-bottom: 12px;
+  margin-bottom: 6px;
   font-size: 14px;
   line-height: 20px;
   opacity: 0.8;
@@ -3930,6 +3930,7 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
 
 .form__button--primary {
   width: 100%;
+  margin-top: -3px;
   padding: 4px;
   gap: 0;
 }
@@ -4644,6 +4645,7 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
 
 .news__swiper-button {
   padding: 0;
+  margin-top: 5px;
 }
 
 .questions {
@@ -5339,7 +5341,7 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
 }
 
 .footer {
-  padding-top: 60px;
+  padding-top: 55px;
   padding-bottom: 52px;
 }
 
@@ -5846,6 +5848,10 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
     margin-bottom: 2px;
   }
 
+  .form__checkbox--primary {
+    margin-bottom: 28px;
+  }
+
   .programs {
     padding-top: 99px;
     padding-bottom: 95px;
@@ -6206,7 +6212,7 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
     -webkit-column-gap: 98px;
     -moz-column-gap: 98px;
     column-gap: 98px;
-    row-gap: 25px;
+    row-gap: 23px;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -6550,7 +6556,11 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
   }
 
   .form__wrapper--primary form {
-    gap: 21px;
+    gap: 22px;
+  }
+
+  .form__input-wrapper span {
+    margin-bottom: 13px;
   }
 
   .form__input-wrapper input,
@@ -6566,10 +6576,6 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
 
   .form__input-wrapper textarea {
     min-height: 92px;
-  }
-
-  .form__input-wrapper--primary label {
-    gap: 13px;
   }
 
   .form__input-wrapper--primary input {
@@ -6596,6 +6602,7 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
 
   .form__select-button--primary {
     min-height: 47px;
+    margin-top: -3px;
   }
 
   .form__checkbox--modal {
@@ -6808,7 +6815,7 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
 
   .news {
     padding-top: 68px;
-    padding-bottom: 58px;
+    padding-bottom: 63px;
   }
 
   .news__buttons ul {
@@ -6844,7 +6851,7 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
   }
 
   .news__swiper {
-    margin-bottom: 23px;
+    margin-bottom: 21px;
     padding: 0 15px;
   }
 
@@ -6953,11 +6960,13 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
   }
 
   .news__pagination {
-    gap: 16px;
+    gap: 14px;
   }
 
   .news__pagination-button {
     padding: 6px 10px;
+    min-width: 28px;
+    min-height: 28px;
     font-size: 14px;
     line-height: 14px;
   }
@@ -7144,7 +7153,7 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    row-gap: 15px;
+    row-gap: 10px;
   }
 
   .footer__logo {
@@ -7189,7 +7198,11 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
   .footer__copyright {
     grid-column: unset;
     text-align: center;
-    gap: 16px;
+    gap: 18px;
+  }
+
+  .footer__copyright a {
+    margin-top: 5px;
   }
 
   .modal__wrapper {
