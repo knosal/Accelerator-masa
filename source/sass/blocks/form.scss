@@ -173,7 +173,7 @@
   &--primary {
     form {
       @include vp-767 {
-        gap: 21px;
+        gap: 22px;
       }
     }
   }
@@ -186,12 +186,16 @@
   }
 
   span {
-    margin-bottom: 12px;
+    margin-bottom: 6px;
 
     font-size: 14px;
     line-height: 20px;
 
     opacity: 0.8;
+
+    @include vp-767 {
+      margin-bottom: 13px;
+    }
   }
 
   input,
@@ -253,12 +257,6 @@
   }
 
   &--primary {
-    label {
-      @include vp-767 {
-        gap: 13px;
-      }
-    }
-
     input {
       @include vp-767 {
         min-height: 47px;
@@ -389,6 +387,7 @@
 
     @include vp-767 {
       min-height: 47px;
+      margin-top: -3px;
     }
 
     &:hover,
@@ -499,6 +498,10 @@
 
   &--primary {
     margin-bottom: 24px;
+
+    @include vp-1199 {
+      margin-bottom: 28px;
+    }
 
     @include vp-767 {
       margin-bottom: 12px;
@@ -685,6 +688,7 @@ input[type='checkbox']:checked ~ .form__checkbox-icon--primary {
 
   &--primary {
     width: 100%;
+    margin-top: -3px;
     padding: 4px;
     gap: 0;
 
