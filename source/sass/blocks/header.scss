@@ -19,7 +19,7 @@
       transition: all $trans-default;
 
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         z-index: 5;
         top: 0;

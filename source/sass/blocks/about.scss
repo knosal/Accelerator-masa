@@ -218,13 +218,13 @@
     z-index: 1;
     left: -21px;
     top: -21px;
-    content: '';
+    content: "";
 
     width: 42px;
     height: 42px;
     padding: 10px;
 
-    background: url('../img/svg/star.svg') no-repeat center $color-cerulean-blue;
+    background: url("../img/svg/star.svg") no-repeat center $color-cerulean-blue;
 
     @include vp-767 {
       background-size: 18px 18px;

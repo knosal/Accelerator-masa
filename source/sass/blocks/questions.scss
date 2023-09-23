@@ -83,133 +83,7 @@
     min-height: 79px;
   }
 
-  &:hover,
-  &:focus-within {
-    background-color: $color-default-white;
-
-    button {
-      background-color: transparent;
-      outline: 1px solid $color-cerulean-blue;
-
-      &::after,
-      &::before {
-        background-color: $color-cerulean-blue;
-      }
-    }
-
-    &:active {
-      color: $color-endeavour;
-
-      button {
-        background-color: $color-endeavour;
-        outline: none;
-
-        &::after,
-        &::before {
-          background-color: $color-default-white;
-        }
-      }
-    }
-  }
-
-  &:active {
-    color: $color-endeavour;
-
-    button {
-      background-color: $color-endeavour;
-      outline: none;
-
-      &::after,
-      &::before {
-        background-color: $color-default-white;
-      }
-    }
-  }
-
-  &:focus,
-  &:focus-visible {
-    background-color: $color-default-white;
-
-    button {
-      background-color: transparent;
-      outline: 1px solid $color-cerulean-blue;
-
-      &::after,
-      &::before {
-        background-color: $color-cerulean-blue;
-      }
-    }
-  }
-
-  &.is-active {
-    &:hover,
-    &:focus-within {
-      background-color: $color-cerulean-blue;
-
-      button {
-        background-color: transparent;
-        outline: 1px solid $color-default-white;
-
-        &::before {
-          background-color: $color-default-white;
-        }
-
-        &::after {
-          background-color: $color-transparent;
-        }
-      }
-
-      &:active {
-        background-color: $color-endeavour;
-
-        button {
-          background-color: $color-default-white;
-
-          &::before {
-            background-color: $color-endeavour;
-          }
-
-          &::after {
-            background-color: $color-transparent;
-          }
-        }
-      }
-    }
-
-    &:active {
-      background-color: $color-endeavour;
-
-      button {
-        background-color: $color-default-white;
-
-        &::before {
-          background-color: $color-endeavour;
-        }
-
-        &::after {
-          background-color: $color-transparent;
-        }
-      }
-    }
-
-    &:focus,
-    &:focus-visible {
-      background-color: $color-cerulean-blue;
-
-      button {
-        background-color: transparent;
-        outline: 1px solid $color-default-white;
-
-        &::before {
-          background-color: $color-default-white;
-        }
-
-        &::after {
-          background-color: $color-transparent;
-        }
-      }
-    }
-  }
+  @include accordion-states;
 }
 
 .questions__item-wrapper {
@@ -277,7 +151,7 @@
   &::after,
   &::before {
     position: absolute;
-    content: '';
+    content: "";
 
     background-color: $color-default-white;
 

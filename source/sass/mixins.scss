@@ -1,6 +1,3 @@
-//-------------------------
-// Состояния
-
 @mixin retina {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     @content;
@@ -39,9 +36,6 @@
   }
 }
 
-//-------------------------
-// Breakpoints
-
 @mixin vp-1441 {
   @media (min-width: ($vp-1440 + 1px)) {
     @content;
@@ -65,9 +59,6 @@
     @content;
   }
 }
-
-//-------------------------
-// Заголовки
 
 @mixin title {
   margin: 0;
@@ -94,9 +85,6 @@
   color: $color-default-white;
 }
 
-//-------------------------
-// Элементы
-
 @mixin corner {
   position: relative;
 
@@ -106,12 +94,12 @@
     position: absolute;
     right: -19px;
     bottom: 0;
-    content: '';
+    content: "";
 
     width: 20px;
     height: 20px;
 
-    mask-image: url('../img/svg/corner.svg');
+    mask-image: url("../img/svg/corner.svg");
     mask-repeat: no-repeat;
     mask-size: cover;
     background-color: $color-default-white;
@@ -124,4 +112,133 @@
     }
   }
 }
-//-------------------------
+
+@mixin accordion-states {
+  &:hover,
+  &:focus-within {
+    background-color: $color-default-white;
+
+    button {
+      background-color: transparent;
+      outline: 1px solid $color-cerulean-blue;
+
+      &::after,
+      &::before {
+        background-color: $color-cerulean-blue;
+      }
+    }
+
+    &:active {
+      color: $color-endeavour;
+
+      button {
+        background-color: $color-endeavour;
+        outline: none;
+
+        &::after,
+        &::before {
+          background-color: $color-default-white;
+        }
+      }
+    }
+  }
+
+  &:active {
+    color: $color-endeavour;
+
+    button {
+      background-color: $color-endeavour;
+      outline: none;
+
+      &::after,
+      &::before {
+        background-color: $color-default-white;
+      }
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    background-color: $color-default-white;
+
+    button {
+      background-color: transparent;
+      outline: 1px solid $color-cerulean-blue;
+
+      &::after,
+      &::before {
+        background-color: $color-cerulean-blue;
+      }
+    }
+  }
+
+  &.is-active {
+    &:hover,
+    &:focus-within {
+      background-color: $color-cerulean-blue;
+
+      button {
+        background-color: transparent;
+        outline: 1px solid $color-default-white;
+
+        &::before {
+          background-color: $color-default-white;
+        }
+
+        &::after {
+          background-color: $color-transparent;
+        }
+      }
+
+      &:active {
+        background-color: $color-endeavour;
+
+        button {
+          background-color: $color-default-white;
+
+          &::before {
+            background-color: $color-endeavour;
+          }
+
+          &::after {
+            background-color: $color-transparent;
+          }
+        }
+      }
+    }
+
+    &:active {
+      background-color: $color-endeavour;
+
+      button {
+        background-color: $color-default-white;
+
+        &::before {
+          background-color: $color-endeavour;
+        }
+
+        &::after {
+          background-color: $color-transparent;
+        }
+      }
+    }
+
+    &:focus,
+    &:focus-visible {
+      background-color: $color-cerulean-blue;
+
+      button {
+        background-color: transparent;
+        outline: 1px solid $color-default-white;
+
+        &::before {
+          background-color: $color-default-white;
+        }
+
+        &::after {
+          background-color: $color-transparent;
+        }
+      }
+    }
+  }
+}
