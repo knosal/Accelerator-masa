@@ -5779,7 +5779,7 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
 
 @media (min-width: 1440px) {
   .hero__slide {
-    min-height: 55.56vw;
+    min-height: 47vw;
   }
 }
 
