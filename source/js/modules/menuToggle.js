@@ -1,5 +1,3 @@
-import {sliderConfigs, sliders} from "./initSwiperSlider";
-
 const initButtonMenu = () => {
   const isOpened = "is-opened";
   const header = document.querySelector(".header");
@@ -23,27 +21,11 @@ const initButtonMenu = () => {
     }
   };
 
-  const toggleKeyboardForHeroSwiper = () => {
-    for (const config of sliderConfigs) {
-      if (config.selector === ".hero__swiper") {
-        config.options.keyboard = false;
-        config.options.autoplay.delay = 0;
-
-        const slider = sliders[config.selector];
-        if (slider) {
-          slider.update();
-        }
-      }
-    }
-  };
-
   const openMenu = () => {
     header.classList.add(isOpened);
     container.classList.add(isOpened);
     toggleBtn.classList.add(isOpened);
     navigation.classList.add(isOpened);
-
-    toggleKeyboardForHeroSwiper();
 
     document.addEventListener("keydown", onDocumentKeydown);
     navigation.addEventListener("click", onLinkClick);
