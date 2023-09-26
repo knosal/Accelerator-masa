@@ -8,7 +8,7 @@
 .hero__slide {
   position: relative;
 
-  height: fit-content;
+  min-height: 800px;
   padding-top: 409px;
   padding-bottom: 60px;
   display: flex;
@@ -16,12 +16,18 @@
 
   background-color: $picture-overlay;
 
+  @media (min-width: 1440px) {
+    min-height: 55.56vw;
+  }
+
   @include vp-1199 {
     padding-top: 676px;
+    min-height: 133.3vw;
   }
 
   @include vp-767 {
     padding-top: 233px;
+    min-height: 177.5vw;
     padding-bottom: 20px;
   }
 

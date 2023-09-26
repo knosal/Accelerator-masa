@@ -189,4 +189,4 @@ heroSlides.forEach((slide) => {
   setTabIndexAndInert(slide, pagination, button);
 });
 
-export {sliderConfigs, sliders, initAllSliders};
+export {initAllSliders};
