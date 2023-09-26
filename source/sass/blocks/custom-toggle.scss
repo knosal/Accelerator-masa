@@ -1,0 +1,121 @@
+.custom-toggle {
+  position: relative;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 300;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 30px 0;
+
+  @include vp-1199 {
+    padding-bottom: 29px;
+  }
+
+  input {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+
+    clip: rect(0 0 0 0);
+  }
+
+  &.is-invalid {
+    label span {
+      border: 1px solid $color-wild-watermelon;
+    }
+  }
+}
+
+.custom-toggle__text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+.custom-toggle__label {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+
+  input:disabled {
+    cursor: none;
+
+    & + span {
+      background: rgba($color-cerulean-blue, 0.2);
+    }
+  }
+
+  input:checked {
+    + span {
+      background: $color-default-white;
+    }
+
+    ~ svg {
+      display: inline;
+      stroke: $color-cerulean-blue;
+    }
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background: $color-cerulean-blue;
+    border: 1px solid rgba($color-default-white, 0.7);
+    border-radius: 2px;
+  }
+
+  svg {
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover:not(:disabled),
+  &:focus-within:not(:disabled) {
+    span {
+      border: 1px solid rgba($color-default-white, 1);
+      background: $color-cerulean-blue;
+    }
+
+    svg {
+      stroke: $color-default-white;
+    }
+  }
+
+  @include vp-767 {
+    margin-right: 15px;
+  }
+}
+
+.custom-toggle--secondary {
+  padding-bottom: 27px;
+
+  @include vp-767 {
+    padding-bottom: 13px;
+  }
+
+  p {
+    color: rgba($color-default-white, 0.9);
+
+    @include vp-767 {
+      margin-left: 5px;
+      line-height: 14px;
+    }
+  }
+}
+
+.custom-toggle--secondary-text-wrapper {
+  display: flex;
+  flex-direction: column;
+}

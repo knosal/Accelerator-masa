@@ -1,5 +1,5 @@
-import Swiper from '../vendor/swiper';
-import {isMobile} from '../utils/is-mobile';
+import Swiper from "../vendor/swiper";
+import {isMobile} from "../utils/is-mobile";
 
 const initSwiper = (selector, options) => {
   const element = document.querySelector(selector);
@@ -14,13 +14,13 @@ const initSwiper = (selector, options) => {
 
 const sliderConfigs = [
   {
-    selector: '.hero__swiper',
+    selector: ".hero__swiper",
     options: {
       pagination: {
-        el: '.hero__pagination',
-        type: 'bullets',
-        bulletClass: 'hero__pagination-bullet',
-        bulletActiveClass: 'hero__pagination-bullet--active',
+        el: ".hero__pagination",
+        type: "bullets",
+        bulletClass: "hero__pagination-bullet",
+        bulletActiveClass: "hero__pagination-bullet--active",
         clickable: true,
       },
       keyboard: true,
@@ -28,29 +28,29 @@ const sliderConfigs = [
       autoplay: {
         delay: 3000,
       },
-      focusableElements: 'a, button',
+      focusableElements: "a, button",
 
-      wrapperClass: 'swiper__wrapper',
-      slideClass: 'swiper__slide',
+      wrapperClass: "swiper__wrapper",
+      slideClass: "swiper__slide",
     },
   },
   {
-    selector: '.programs__swiper',
+    selector: ".programs__swiper",
     options: {
       keyboard: true,
-      wrapperClass: 'swiper__wrapper',
-      slideClass: 'swiper__slide',
+      wrapperClass: "swiper__wrapper",
+      slideClass: "swiper__slide",
 
       scrollbar: {
-        el: '.programs__scrollbar',
+        el: ".programs__scrollbar",
         draggable: true,
         dragSize: 392,
         hide: false,
       },
 
       navigation: {
-        nextEl: '.programs__swiper-button--next',
-        prevEl: '.programs__swiper-button--prev',
+        nextEl: ".programs__swiper-button--next",
+        prevEl: ".programs__swiper-button--prev",
       },
 
       breakpoints: {
@@ -64,7 +64,7 @@ const sliderConfigs = [
         },
         768: {
           spaceBetween: 30,
-          slidesPerView: 'auto',
+          slidesPerView: "auto",
           scrollbar: {
             dragSize: 324,
           },
@@ -72,7 +72,7 @@ const sliderConfigs = [
         320: {
           slidesPerView: 1,
           scrollbar: {
-            el: '',
+            el: "",
             enabled: false,
           },
         },
@@ -80,31 +80,31 @@ const sliderConfigs = [
     },
   },
   {
-    selector: '.news__swiper',
+    selector: ".news__swiper",
     options: {
       keyboard: true,
-      wrapperClass: 'swiper__wrapper',
-      slideClass: 'swiper__slide',
-      cssMode: 'true',
+      wrapperClass: "swiper__wrapper",
+      slideClass: "swiper__slide",
+      cssMode: "true",
 
       navigation: {
-        nextEl: '.news__swiper-button--next',
-        prevEl: '.news__swiper-button--prev',
+        nextEl: ".news__swiper-button--next",
+        prevEl: ".news__swiper-button--prev",
       },
 
       pagination: {
-        el: '.news__pagination',
+        el: ".news__pagination",
         clickable: true,
-        bulletClass: 'news__pagination-button',
-        bulletActiveClass: 'news__pagination-button--active',
+        bulletClass: "news__pagination-button",
+        bulletActiveClass: "news__pagination-button--active",
         renderBullet: (index, className) => {
-          return '<button class="' + className + '">' + (index + 1) + '</button>';
+          return '<button class="' + className + '">' + (index + 1) + "</button>";
         },
       },
 
       breakpoints: {
         1200: {
-          slidesPerView: 'auto',
+          slidesPerView: "auto",
         },
         768: {
           slidesPerView: 4,
@@ -117,14 +117,14 @@ const sliderConfigs = [
     },
   },
   {
-    selector: '.feedback__swiper',
+    selector: ".feedback__swiper",
     options: {
       keyboard: true,
-      wrapperClass: 'swiper__wrapper',
-      slideClass: 'swiper__slide',
+      wrapperClass: "swiper__wrapper",
+      slideClass: "swiper__slide",
 
       scrollbar: {
-        el: '.feedback__scrollbar',
+        el: ".feedback__scrollbar",
         draggable: true,
         dragSize: 392,
         hide: false,
@@ -136,7 +136,7 @@ const sliderConfigs = [
           spaceBetween: 32,
         },
         768: {
-          slidesPerView: 'auto',
+          slidesPerView: "auto",
           spaceBetween: 30,
           scrollbar: {
             dragSize: 324,
@@ -145,15 +145,15 @@ const sliderConfigs = [
         320: {
           slidesPerView: 1,
           scrollbar: {
-            el: '',
+            el: "",
             enabled: false,
           },
         },
       },
 
       navigation: {
-        nextEl: '.feedback__swiper-button--next',
-        prevEl: '.feedback__swiper-button--prev',
+        nextEl: ".feedback__swiper-button--next",
+        prevEl: ".feedback__swiper-button--prev",
       },
     },
   },
@@ -162,13 +162,13 @@ const sliderConfigs = [
 const sliders = {}; // Объект для хранения всех слайдеров
 
 const setTabIndexAndInert = (slide, pagination, button) => {
-  if (!slide.classList.contains('swiper-slide-duplicate')) {
-    slide.setAttribute('tabindex', 0);
-    pagination.removeAttribute('inert');
-    button.removeAttribute('tabindex');
+  if (!slide.classList.contains("swiper-slide-duplicate")) {
+    slide.setAttribute("tabindex", 0);
+    pagination.removeAttribute("inert");
+    button.removeAttribute("tabindex");
   } else {
-    pagination.setAttribute('inert', '');
-    button.setAttribute('tabindex', '-1');
+    pagination.setAttribute("inert", "");
+    button.setAttribute("tabindex", "-1");
   }
 };
 
@@ -181,13 +181,13 @@ const initAllSliders = () => {
   });
 };
 
-const heroSlider = sliders['.hero__swiper'];
-const heroSlides = heroSlider ? heroSlider.querySelectorAll('.hero__slide') : [];
+const heroSlider = sliders[".hero__swiper"];
+const heroSlides = heroSlider ? heroSlider.querySelectorAll(".hero__slide") : [];
 
 heroSlides.forEach((slide) => {
-  const pagination = slide.querySelector('.hero__pagination');
-  const button = slide.querySelector('.hero__slide-button');
+  const pagination = slide.querySelector(".hero__pagination");
+  const button = slide.querySelector(".hero__slide-button");
   setTabIndexAndInert(slide, pagination, button);
 });
 
-export {initAllSliders};
+export {sliderConfigs, sliders, initAllSliders};

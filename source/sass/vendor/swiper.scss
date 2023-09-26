@@ -130,7 +130,7 @@
 
 /* CSS Mode */
 .swiper-css-mode > .swiper__wrapper {
-  overflow: auto;
+  //overflow: auto;
   scrollbar-width: none;
   /* For Firefox */
   -ms-overflow-style: none;
@@ -438,7 +438,7 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar {
   border-radius: 10px;
   position: relative;
-  -ms-touch-action: none;
+  //-ms-touch-action: none;
   background: rgba(0, 0, 0, 0.1);
 }
 

@@ -1,24 +1,24 @@
-import {initAccordions} from './vendor/accordions/init-accordion';
-import {CustomSelect} from './vendor/custom-select/custom-select';
-import {initModals} from './vendor/modals/init-modals';
-import {iosVhFix} from './utils/ios-vh-fix';
-import {Form} from './vendor/form-validate/form';
-import {createScript} from './vendor/pixelperfect';
+import {initAccordions} from "./vendor/accordions/init-accordion";
+import {CustomSelect} from "./vendor/custom-select/custom-select";
+import {initModals} from "./vendor/modals/init-modals";
+import {iosVhFix} from "./utils/ios-vh-fix";
+import {Form} from "./vendor/form-validate/form";
+import {createScript} from "./vendor/pixelperfect";
 
-import {initAllSliders} from './modules/initSwiperSlider';
-import {initNewsFilter} from './modules/initNewsFilter';
-import {initLineBreaks} from './modules/removeLineBreaks';
-import {initButtonMenu} from './modules/menuToggle';
-import {initMap} from './modules/map';
+import {initAllSliders} from "./modules/initSwiperSlider";
+import {initNewsFilter} from "./modules/initNewsFilter";
+import {initLineBreaks} from "./modules/removeLineBreaks";
+import {initButtonMenu} from "./modules/menuToggle";
+import {initMap} from "./modules/map";
 
 // ---------------------------------
 
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener("DOMContentLoaded", () => {
   iosVhFix();
   initButtonMenu();
 
-  window.addEventListener('load', () => {
-    createScript(); //pixelperfect;
+  window.addEventListener("load", () => {
+    //createScript(); //pixelperfect;
     initModals();
     initAllSliders();
     initAccordions();

@@ -299,7 +299,8 @@
   }
 
   &.is-invalid {
-    input {
+    input,
+    textarea {
       border: 1px solid $color-wild-watermelon;
       background-color: rgba(255, 94, 102, 0.2);
     }

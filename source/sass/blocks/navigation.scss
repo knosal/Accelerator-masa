@@ -157,7 +157,8 @@
   height: 0;
   width: 100%;
   transition: max-height 0.5s;
-  max-height: calc(100vh - 89px);
+  max-height: calc(98vh - 89px);
+  overflow: scroll;
 }
 
 .navigation__item {
@@ -213,6 +214,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  overflow: scroll;
 }
 
 .navigation__sublist-item {
