@@ -2546,29 +2546,17 @@ button,
   stroke: #ffffff;
 }
 
+.custom-toggle__label--primary span {
+  background: #ffffff;
+  border: 1px solid rgba(49, 109, 194, 0.7);
+}
+
 .custom-toggle--secondary {
   padding-bottom: 27px;
-  border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 .custom-toggle--secondary p {
   color: rgba(255, 255, 255, 0.9);
-}
-
-.custom-toggle--secondary:hover,
-.custom-toggle--secondary:focus-within {
-  border: 1px solid #ffffff;
-}
-
-.custom-toggle--secondary:focus,
-.custom-toggle--secondary:focus-visible {
-  border: 1px solid #ffffff;
-}
-
-.custom-toggle--secondary:disabled {
-  border: 1px solid #ffffff;
-  background-color: rgba(255, 255, 255, 0.6);
-  pointer-events: none;
 }
 
 .custom-toggle--secondary-text-wrapper {
@@ -3966,7 +3954,12 @@ button,
 }
 
 .form__checkbox-icon--primary {
-  border: 1px solid rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+  border: 1px solid #316dc2;
+}
+
+.form__checkbox-icon--primary span {
+  background: transparent;
 }
 
 .form__checkbox-icon--primary:hover,
