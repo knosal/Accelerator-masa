@@ -2932,9 +2932,7 @@ button,
 
 .hero__slide {
   position: relative;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  min-height: 800px;
   padding-top: 409px;
   padding-bottom: 60px;
   display: -webkit-box;
@@ -5779,6 +5777,12 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
   pointer-events: auto;
 }
 
+@media (min-width: 1440px) {
+  .hero__slide {
+    min-height: 55.56vw;
+  }
+}
+
 @media (min-width: 1441px) {
   .about__features {
     padding: 92px 108px 58px 128px;
@@ -5832,6 +5836,7 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
 
   .hero__slide {
     padding-top: 676px;
+    min-height: 133.3vw;
   }
 
   .hero__slide-inner h3 {
@@ -6460,6 +6465,7 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
 
   .hero__slide {
     padding-top: 233px;
+    min-height: 177.5vw;
     padding-bottom: 20px;
   }
 
