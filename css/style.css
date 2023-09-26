@@ -4163,7 +4163,7 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
   -ms-flex-pack: end;
   justify-content: flex-end;
   border-radius: 12px;
-  background-color: #a9afb7;
+  background-color: #316dc2;
 }
 
 .programs__item picture,
