@@ -936,7 +936,7 @@
                         <input type="tel" name="phone" required />
                       </label>
                     </div>
-                    <div class="form__input-wrapper form__input-wrapper--primary" data-required data-validate-type="text">
+                    <div class="form__input-wrapper form__input-wrapper--primary" data-required data-validate-type="text" minlength="2">
                       <label>
                         <span>Ваше сообщение</span>
                         <textarea name="message" id="message" required></textarea>
@@ -955,12 +955,25 @@
                         <li class="form__select-item custom-select__item" tabindex="0" data-select-value="saint-petersburg" aria-selected="false" role="option">Санкт-Петербург</li>
                       </ul>
                     </div>
-                    <div class="form__checkbox form__checkbox--primary" data-validate-type="checkbox">
+                    <!--  <div class="form__checkbox form__checkbox--primary" data-validate-type="checkbox">
                       <label>
-                        <input type="checkbox" value="agree" name="user-agreement" required />
+                        <input type="checkbox" value="agree" name="user-agreement" required tabindex="1" />
                         <span class="form__checkbox-icon form__checkbox-icon--primary"></span>
                         <span class="form__checkbox-label">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</span>
                       </label>
+                    </div>-->
+                    <div class="custom-toggle custom-toggle--secondary" data-validate-type="checkbox" data-on-input-validate="data-on-input-validate" data-required="data-required">
+                      <label class="custom-toggle__label">
+                        <input type="checkbox" name="checkbox" aria-label="поле ввода вашего телефона" />
+                        <span></span>
+                        <svg width="10" height="8" aria-hidden="true">
+                          <use href="img/sprite.svg#checkbox-icon"></use>
+                        </svg>
+                      </label>
+
+                      <div class="custom-toggle--secondary-text-wrapper">
+                        <span class="custom-toggle__text">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</span>
+                      </div>
                     </div>
                     <button class="form__button form__button--primary button button--secondary" type="submit">
                       <span>Отправить</span>

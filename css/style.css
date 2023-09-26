@@ -546,7 +546,6 @@ template {
 /* CSS Mode */
 
 .swiper-css-mode > .swiper__wrapper {
-  overflow: auto;
   scrollbar-width: none;
   /* For Firefox */
   -ms-overflow-style: none;
@@ -908,7 +907,6 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar {
   border-radius: 10px;
   position: relative;
-  -ms-touch-action: none;
   background: rgba(0, 0, 0, 0.1);
 }
 
@@ -2458,6 +2456,114 @@ button,
   color: #15ab07;
 }
 
+.custom-toggle {
+  position: relative;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 30px 0;
+}
+
+.custom-toggle input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+}
+
+.custom-toggle.is-invalid label span {
+  border: 1px solid #ff5e66;
+}
+
+.custom-toggle__text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+.custom-toggle__label {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.custom-toggle__label input:disabled {
+  cursor: none;
+}
+
+.custom-toggle__label input:disabled + span {
+  background: rgba(49, 109, 194, 0.2);
+}
+
+.custom-toggle__label input:checked + span {
+  background: #ffffff;
+}
+
+.custom-toggle__label input:checked ~ svg {
+  display: inline;
+  stroke: #316dc2;
+}
+
+.custom-toggle__label span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #316dc2;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 2px;
+}
+
+.custom-toggle__label svg {
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.custom-toggle__label:hover:not(:disabled) span,
+.custom-toggle__label:focus-within:not(:disabled) span {
+  border: 1px solid white;
+  background: #316dc2;
+}
+
+.custom-toggle__label:hover:not(:disabled) svg,
+.custom-toggle__label:focus-within:not(:disabled) svg {
+  stroke: #ffffff;
+}
+
+.custom-toggle--secondary {
+  padding-bottom: 27px;
+}
+
+.custom-toggle--secondary p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.custom-toggle--secondary-text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 .button {
   padding: 4px;
   padding-left: 30px;
@@ -3337,7 +3443,8 @@ button,
   width: 100%;
   -webkit-transition: max-height 0.5s;
   transition: max-height 0.5s;
-  max-height: calc(100vh - 89px);
+  max-height: calc(98vh - 89px);
+  overflow: scroll;
 }
 
 .navigation__item {
@@ -3397,6 +3504,7 @@ button,
   margin: 0;
   padding: 0;
   list-style: none;
+  overflow: scroll;
 }
 
 .navigation__sublist-item {
@@ -3601,7 +3709,8 @@ button,
   opacity: 0.8;
 }
 
-.form__input-wrapper.is-invalid input {
+.form__input-wrapper.is-invalid input,
+.form__input-wrapper.is-invalid textarea {
   border: 1px solid #ff5e66;
   background-color: rgba(255, 94, 102, 0.2);
 }
@@ -4602,8 +4711,6 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
   color: rgba(49, 109, 194, 0.5);
   border: none;
   border-radius: 50%;
-  -webkit-transition: background-color 0.3s ease-in, color 0.3s ease-in, outline 0.3s ease-in;
-  transition: background-color 0.3s ease-in, color 0.3s ease-in, outline 0.3s ease-in;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -5514,6 +5621,9 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
 
 .footer__copyright p {
   margin: 0;
+  -webkit-transform: translate(0, -5px);
+  -ms-transform: translate(0, -5px);
+  transform: translate(0, -5px);
 }
 
 .footer__copyright a {
@@ -5697,6 +5807,10 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
 
   .container--slider {
     padding: 0;
+  }
+
+  .custom-toggle {
+    padding-bottom: 29px;
   }
 
   .header {
@@ -6268,6 +6382,19 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
 
   .container--news {
     padding: 0;
+  }
+
+  .custom-toggle__label {
+    margin-right: 15px;
+  }
+
+  .custom-toggle--secondary {
+    padding-bottom: 13px;
+  }
+
+  .custom-toggle--secondary p {
+    margin-left: 5px;
+    line-height: 14px;
   }
 
   .button {
@@ -7042,6 +7169,10 @@ input[type=checkbox]:checked ~ .form__checkbox-icon--primary:disabled::after {
   .feedback__swiper {
     margin-top: 31px;
     padding-left: 1px;
+  }
+
+  .feedback__swiper-slide {
+    margin-right: 15px;
   }
 
   .feedback__item {
