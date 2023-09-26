@@ -3438,7 +3438,7 @@ button,
   flex-direction: column;
   gap: 7px;
   min-width: 286px;
-  overflow: hidden;
+  overflow-x: auto;
   margin: 0;
   padding: 0;
   background: #316dc2;
@@ -3449,7 +3449,6 @@ button,
   -webkit-transition: max-height 0.5s;
   transition: max-height 0.5s;
   max-height: calc(98vh - 89px);
-  overflow: scroll;
 }
 
 .navigation__item {
@@ -3510,6 +3509,7 @@ button,
   padding: 0;
   list-style: none;
   overflow: scroll;
+  overflow-x: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
