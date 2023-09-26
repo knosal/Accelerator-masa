@@ -575,7 +575,12 @@
   }
 
   &--primary {
-    border: 1px solid rgba(255, 255, 255, 0.7);
+    background-color: transparent;
+    border: 1px solid $color-cerulean-blue;
+
+    span {
+      background: transparent;
+    }
 
     &:hover,
     &:focus-within {
