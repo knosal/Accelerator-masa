@@ -14,6 +14,10 @@
   &.is-opened {
     width: 286px;
 
+    @include vp-767 {
+      width: 290px;
+    }
+
     .navigation__list {
       height: auto;
       padding: 29px 25px 13px;
@@ -147,6 +151,9 @@
 }
 
 .navigation__list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
   min-width: 286px;
   overflow: hidden;
   margin: 0;
@@ -162,8 +169,16 @@
 }
 
 .navigation__item {
-  margin: 0 0 16px;
+  margin: 0 0 6px;
   padding: 0;
+
+  @media (max-width: 768px) {
+    margin: 0 0 7px;
+
+    &:last-child {
+      transform: translate(0, -5px);
+    }
+  }
 }
 
 .navigation__link {
@@ -215,10 +230,14 @@
   padding: 0;
   list-style: none;
   overflow: scroll;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 6px;
 }
 
 .navigation__sublist-item {
-  margin: 0 0 4px;
   padding: 0 0 0 16px;
 }
 

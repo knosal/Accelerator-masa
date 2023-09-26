@@ -25,9 +25,9 @@ const sliderConfigs = [
       },
       keyboard: true,
       loop: true,
-      autoplay: {
+      /* autoplay: {
         delay: 3000,
-      },
+      },*/
       focusableElements: "a, button",
 
       wrapperClass: "swiper__wrapper",

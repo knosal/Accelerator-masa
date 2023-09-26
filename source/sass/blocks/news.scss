@@ -38,7 +38,7 @@
     width: fit-content;
     margin: 0 auto;
     align-items: center;
-
+    flex-wrap: wrap;
     list-style: none;
 
     @include vp-1199 {
@@ -488,8 +488,8 @@
 
   border: none;
   border-radius: 50%;
+  background-color: transparent;
 
-  // transition: background-color $trans-default, color $trans-default, outline $trans-default;
   cursor: pointer;
   user-select: none;
 

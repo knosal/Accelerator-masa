@@ -4,6 +4,8 @@
   line-height: 27px;
   font-weight: 300;
 
+  gap: 10px;
+
   display: flex;
   align-items: center;
   width: 100%;
@@ -38,9 +40,9 @@
 
 .custom-toggle__label {
   position: relative;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
+  min-width: 20px;
+  min-height: 20px;
+
   cursor: pointer;
 
   input:disabled {
@@ -91,10 +93,6 @@
     svg {
       stroke: $color-default-white;
     }
-  }
-
-  @include vp-767 {
-    margin-right: 15px;
   }
 }
 
