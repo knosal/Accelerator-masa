@@ -1092,13 +1092,21 @@
                   <li class="form__select-item custom-select__item" tabindex="0" data-select-value="saint-petersburg" aria-selected="false" role="option">Санкт-Петербург</li>
                 </ul>
               </div>
-              <div class="form__checkbox form__checkbox--modal" data-validate-type="checkbox">
-                <label>
-                  <input type="checkbox" value="agree" name="user-agreement" />
+
+              <div class="custom-toggle custom-toggle--secondary" data-validate-type="checkbox" data-on-input-validate="data-on-input-validate" data-required="data-required">
+                <label class="custom-toggle__label">
+                  <input type="checkbox" name="checkbox" value="agree" name="user-agreement" aria-label="поле ввода вашего телефона" />
                   <span class="form__checkbox-icon form__checkbox-icon--modal"></span>
-                  <span class="form__checkbox-label">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</span>
+                  <svg width="10" height="8" aria-hidden="true">
+                    <use href="img/sprite.svg#checkbox-icon"></use>
+                  </svg>
                 </label>
+
+                <div class="custom-toggle--secondary-text-wrapper">
+                  <span class="custom-toggle__text">Я&nbsp;согласен на&nbsp;обработку моих персональных данных</span>
+                </div>
               </div>
+
               <button class="form__button button button--primary" type="submit">
                 <span>Отправить</span>
                 <span class="form__button-icon button__icon">

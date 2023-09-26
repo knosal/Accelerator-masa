@@ -111,6 +111,24 @@
       line-height: 14px;
     }
   }
+
+  border: 1px solid rgba(255, 255, 255, 0.7);
+
+  &:hover,
+  &:focus-within {
+    border: 1px solid $color-default-white;
+  }
+
+  &:focus,
+  &:focus-visible {
+    border: 1px solid $color-default-white;
+  }
+
+  &:disabled {
+    border: 1px solid $color-default-white;
+    background-color: rgba(255, 255, 255, 0.6);
+    pointer-events: none;
+  }
 }
 
 .custom-toggle--secondary-text-wrapper {

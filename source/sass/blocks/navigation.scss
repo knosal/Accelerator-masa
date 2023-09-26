@@ -215,9 +215,13 @@
 .navigation__link-submenu {
   transition: color $trans-default;
 
+  svg {
+    transform: rotate(180deg);
+  }
+
   &.is-active {
     svg {
-      transform: rotate(180deg);
+      transform: rotate(0);
 
       transition: transform $trans-default;
     }
